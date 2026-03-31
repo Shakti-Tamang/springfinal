@@ -21,6 +21,9 @@ logging:
     com.mycompany.myapp: DEBUG
 
 spring:
+  docker:
+    compose:
+      enabled: false
   devtools:
     restart:
       enabled: true
@@ -32,12 +35,19 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/pracfinal
-    username: pracfinal
-    password:
+    url: jdbc:postgresql://localhost:5432/RideNepa
+    username: postgres
+    password: Shakti
     hikari:
       poolName: Hikari
       auto-commit: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
