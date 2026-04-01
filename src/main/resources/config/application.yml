@@ -169,8 +169,24 @@ server:
 
 springdoc:
   show-actuator: true
+  api-docs:
+    enabled: true
   swagger-ui:
     path: /swagger-ui.html
+    enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+    doc-expansion: list
+    show-extensions: true
+    show-common-extensions: true
+  enable-spring-security-support: true
+  group-configs:
+    - group: REST API
+      displayName: REST API
+      paths-to-match:
+        - /api/**
+      packages-to-scan:
+        - com.mycompany.myapp.web.rest
 
 # Properties to be exposed on the /info management endpoint
 info:
