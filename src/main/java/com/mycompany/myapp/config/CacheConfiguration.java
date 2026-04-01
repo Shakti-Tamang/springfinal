@@ -52,7 +52,8 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
             createCache(cm, com.mycompany.myapp.domain.PersistentToken.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".persistentTokens");
-            // jhipster-needle-ehcache-add-entry
+            createCache(cm, com.mycompany.myapp.domain.Product.class.getName());
+            // jhipster-needle-ehcache-add-entry keep this line for JHipster entity cache insertion
         };
     }
 
