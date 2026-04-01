@@ -48,8 +48,9 @@ public class WebConfigurer implements ServletContextInitializer {
             LOG.debug("Registering CORS filter");
             source.registerCorsConfiguration("/api/**", config);
             source.registerCorsConfiguration("/management/**", config);
-            source.registerCorsConfiguration("/v3/api-docs", config);
+            source.registerCorsConfiguration("/v3/api-docs/**", config);
             source.registerCorsConfiguration("/swagger-ui/**", config);
+            source.registerCorsConfiguration("/swagger-ui.html", config);
         }
         return new CorsFilter(source);
     }
