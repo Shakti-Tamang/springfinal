@@ -1,0 +1,17 @@
+{
+  "annotations": {
+    "changelogDate": "20260401110037"
+  },
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
+}
